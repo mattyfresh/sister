@@ -10,7 +10,7 @@
 </head>
 <body>
 
-	<div class="navbar navbar-default navbar-static-top text-center">
+	<div class="navbar navbar-default navbar-static-top text-center" id="top">
 
 		<h1>Jackie Padich</h1>
 
@@ -20,12 +20,12 @@
 		<span class = "glyphicon glyphicon-chevron-right"></span>
 		<div class = "sidebar-wrapper">
 		<ul class = "sidebar-nav">
-			<li class = "sidebar-brand"><a href="#">Jacyln's Profile</a></li>
-				<li><a href="#">About Me</a>
+				<li><a href="#top">Jacyln's Profile</a></li>
+				<li><a href="#about-me">About Me</a>
                 </li>
-                <li><a href="#">My Work</a>
+                <li><a href="#my-work">My Work</a>
                 </li>
-                <li><a href="#">Stuff</a>
+                <li><a href="#list">Stuff</a>
                 </li>
                 <li><a href="#">Poetree</a>
                 </li>
@@ -54,6 +54,63 @@
 
 	</div>
 
+	<div class = "container" id="about-me">
+
+		<div class = "jumbotron text-center">
+
+		<h1>My brother does not know how to use words.  Well.  IM A SHERMAN TANKKK.
+
+		<span class = "glyphicon glyphicon-star"></span>
+
+		</h1>
+
+		
+
+
+
+		</div>
+
+	</div>
+
+	<div class = "container" id="my-work">
+
+		<div class = "jumbotron text-center">
+
+		<h1>I WILL <span class = "glyphicon glyphicon-cloud-download"></span> <br> ON YOUR FAVICON
+
+		
+
+		</h1>
+
+		
+
+
+
+		</div>
+
+	</div>
+
+	<div class="container" id="list">
+
+			<div class="col-lg-3 text-center">
+
+				Lauren and then some
+			</div>
+
+			<div class="col-lg-3 text-center">
+					beer
+			</div>
+			<div class="col-lg-3 text-center">
+					goggles
+			</div>
+			<div class="col-lg-3 text-center">
+				tinder
+			</div>
+
+	</div>
+
+
+	<footer>
 
 
 		<div class="navbar-fixed-bottom">
@@ -61,18 +118,28 @@
 			<div class="navbar-container">
 
 				<p class="navbar-text pull-left">made by danmatt</p>
-
-
-
 			
 			</div>	
 
 		</div>
 
+	</footer>
 
 
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="js/bootstrap.js"></script>
+
+	<script type="text/javascript">
+		
+		$('a').click(function(){
+    		$('html, body').animate({
+        	'scrollTop': $( $.attr(this, 'href') ).offset().top
+    		}, 500);
+    return false;
+		});
+
+
+	</script>
 </body>
 </html>
