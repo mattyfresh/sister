@@ -1,0 +1,41 @@
+.wrapper{
+	span{
+		font-size:60px;
+		position:fixed;
+		top:145px;
+	}
+}
+
+.sidebar-nav{
+	position:fixed;
+	top: 60px;
+	background-color: cyan;
+	padding: 30px 15px;
+	left: -60px;
+	opacity:.1;
+	transition: left 1s, opacity 1s;
+
+		li{
+			list-style: none;
+			padding: 4px 0;
+			transition: opacity 2s;
+			
+			a:hover {
+				color:limegreen;
+				text-decoration: none;
+				
+			}
+		}
+
+}
+
+.sidebar-nav:hover{
+	left: 0;
+	opacity:1;
+}
+
+.jumbotron{
+	top:200px;
+
+}
+
