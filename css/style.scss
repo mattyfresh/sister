@@ -1,3 +1,28 @@
+$navColor : #FFB6AA;
+$textColor : #550C00;
+
+body, html, h1, h2, h3 {
+
+	margin: 0;
+	padding: 0;
+}
+
+
+body {
+
+	background-color: #6B939F;
+}
+
+a {
+
+	color: $textColor;
+}
+
+h1 {
+
+	color: $textColor;
+}
+
 .wrapper{
 	span{
 		font-size:60px;
@@ -9,11 +34,12 @@
 .sidebar-nav{
 	position:fixed;
 	top: 60px;
-	background-color: cyan;
+	background-color: #447684;
 	padding: 30px 15px;
 	left: -60px;
 	opacity:.1;
-	transition: left 1s, opacity 1s;
+	border: .5px solid grey;
+	transition: left 1s, opacity 1s, border 1s;
 
 		li{
 			list-style: none;
@@ -21,7 +47,7 @@
 			transition: opacity 2s;
 			
 			a:hover {
-				color:limegreen;
+				color:white;
 				text-decoration: none;
 				
 			}
@@ -30,16 +56,31 @@
 }
 
 .sidebar-nav:hover{
-	left: 0;
+	left: -2px;
 	opacity:1;
-}
+	}
+
+	.navbar{
+		background-color: $navColor;
+		}
 
 
 .jumbotron{
 	top:200px;
+	background-color: #FFE6AA;
+	color: $textColor;
+	span {
+		height: 65px;
+		width: 70px;
+		color: black;
+	}
 	span:hover{
-		color: salmon;
-		border:2px dashed limegreen;
+		
+		color: purple;
+		
 	}
 }
 
+.navbar-fixed-bottom{
+	background-color: $navColor;
+}
