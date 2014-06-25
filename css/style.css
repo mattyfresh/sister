@@ -25,3 +25,6 @@
 
 .jumbotron {
   top: 200px; }
+  .jumbotron span:hover {
+    color: salmon;
+    border: 2px dashed limegreen; }
