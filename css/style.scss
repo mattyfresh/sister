@@ -34,8 +34,12 @@
 	opacity:1;
 }
 
+
 .jumbotron{
 	top:200px;
-
+	span:hover{
+		color: salmon;
+		border:2px dashed limegreen;
+	}
 }
 
