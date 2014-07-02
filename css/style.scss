@@ -1,111 +1,107 @@
-$navColor : #FFB6AA;
-$textColor : #550C00;
-$bodyColor : #6B939F;
-$jumboColor : #FFE6AA;
+$someColor : white;
+$jumboColor : rgba(20,30,20,.3);
+$font : 'Dancing Script', cursive;
+
 
 body, html, h1, h2, h3 {
-
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
-
 body {
-
-	background-color: $bodyColor;
-	margin-bottom: 40px;
+  background-image: url("../images/heart.JPG");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin-bottom: 40px;
+  /*min-height: 2000px;*/
 }
 
 a {
-
-	color: $textColor;
+  color: #550c00;
 }
 
-h1 {
+  #signature{
+    color: $someColor;
+    font-family: $font;
+  }
 
-	color: $textColor;
+.wrapper span {
+  font-size: 60px;
+  position: fixed;
+  top: 145px;
 }
 
-.wrapper{
-	span{
-		font-size:60px;
-		position:fixed;
-		top:145px;
-	}
+.sidebar-nav {
+  position: fixed;
+  top: 60px;
+  background-color: #447684;
+  padding: 30px 15px;
+  left: -60px;
+  opacity: .1;
+  border: .5px solid grey;
+  z-index: 100;
+  transition: left 1s, opacity 1s, border 1s;
+  li {
+    list-style: none;
+    padding: 4px 0;
+    transition: opacity 2s;
+    a:hover {
+      color: white;
+      text-decoration: none;
+    }
+  }
+  &:hover {
+    left: -2px;
+    opacity: 1;
+  }
 }
 
-.sidebar-nav{
-	position:fixed;
-	top: 60px;
-	background-color: #447684;
-	padding: 30px 15px;
-	left: -60px;
-	opacity:.1;
-	border: .5px solid grey;
-	transition: left 1s, opacity 1s, border 1s;
-
-		li{
-			list-style: none;
-			padding: 4px 0;
-			transition: opacity 2s;
-			
-			a:hover {
-				color:white;
-				text-decoration: none;
-				
-			}
-		}
-
+.navbar {
+  /*background-color: #ffb6aa;*/
+  background-color: rgba(0, 0, 0, 0.2);
+  /*border-color: #ffe6aa; */
+  position: fixed;
+  width: 100%;
+  margin-bottom: 10px;
+  /*height: 20px;*/
 }
 
-.sidebar-nav:hover{
-	left: -2px;
-	opacity:1;
-	}
-.navbar{
-	background-color: $navColor;
-	border-color: $jumboColor;
+.jumbotron {
+  position: relative;
+  top: 60px;
+  margin-bottom: 100px;
+  color: #41002C;
+  background-image: url('../images/rain.jpg');
+  background-attachment: fixed;
+  opacity: .8;
+  span {
+    height: 65px;
+    width: 70px;
+    color: black;
+    &:hover {
+      color: purple;
+    }
+  }
 }
 
-
-.jumbotron{
-	top:200px;
-	background-color: $jumboColor;
-	color: $textColor;
-	span {
-		height: 65px;
-		width: 70px;
-		color: black;
-	}
-	span:hover{
-		
-		color: purple;
-		
-	}
+.navbar-fixed-bottom {
+  background-color: $jumboColor;
+  border-top: 1px solid #ffe6aa;
 }
 
-.navbar-fixed-bottom{
-	background-color: $navColor;
-	border-top: 1px solid $jumboColor;
-}
 .col-lg-3 {
-
-	margin-bottom: 40px;
-	background-color: $navColor;
-	padding: 20px 0;
-	border: 2px solid $bodyColor;
-	border-radius: 10px;
-
-		&:hover {
-
-			background-color: white;
-		}
+  margin-bottom: 40px;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 20px 0;
+  border: 2px solid #6b939f;
+  border-radius: 10px;
+  transition: background-color .5s;
+  &:hover {
+    background-color: pink;
+  }
 }
 
-.navbar-container{
-
-	p:hover{
-
-		font-size: 3em;
-	}
+.navbar-container p:hover {
+  font-size: 3em;
 }
