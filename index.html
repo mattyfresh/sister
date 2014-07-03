@@ -5,26 +5,40 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
 	<link type="text/css" rel="stylesheet" href="css/style.css" />
+	<link type="text/css" rel="stylesheet" href="css/animate.css" />
 	<link href='http://fonts.googleapis.com/css?family=Dancing+Script:700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Ropa+Sans' rel='stylesheet' type='text/css'>
+
 
 
 </head>
+
 <body>
 
-	<div class="navbar navbar-default navbar-static-top text-center" id="top">
 
-		<h1 id="signature">Jackie Padich</h1>
+	<header>
 
-	</div>
+		<nav class="navbar navbar-fixed-top">
 
-	<div class = "wrapper">
-		<span class = "glyphicon glyphicon-chevron-right"></span>
+			<div class="wrapper">
+
+				<h1 class="text-center">Jaclyn Padich</h1>
+
+			</div>
+
+		</nav>
+
+	</header>
+
+
+	<div class="wrapper">
+		<span class="glyphicon glyphicon-chevron-right"></span>
 		<div class = "sidebar-wrapper">
-		<ul class = "sidebar-nav">
+			<ul class = "sidebar-nav">
 				<li><a href="#top">Jacyln's Profile</a></li>
 				<li><a href="#about-me">About Me</a>
                 </li>
-                <li><a href="#my-work">My Work</a>
+                <li><a id="wires" href="#my-work">My Work</a>
                 </li>
                 <li><a href="#list">Stuff</a>
                 </li>
@@ -33,83 +47,24 @@
                 <li><a href="#">Contact</a>
                 </li>
 		
-		</ul>
+			</ul>
 		</div>
-		</div>
-
-<!-- 	<div class = "container">
-
-		<div class = "jumbotron text-center">
-
-		<h1>Hey it's Jaclyn. Welcome to my porfolio!!!!!!!
-
-		<span class = "glyphicon glyphicon-heart-empty"></span>
-
-		</h1>
-
-		
-
-
-
-		</div>
-
 	</div>
 
-	<div class = "container" id="about-me">
+	<div class="wrapper">
+		<div class="jumbotron container">
+			<ul class="list-inline text-center">
+				<h2 class="text-center">Things I have done</h2>
+				<li><img src="images/wires.jpg"></li>
+				<li><img src="images/wires.jpg"></li>
+				<li><img src="images/wires.jpg"></li>
+				<li><img src="images/wires.jpg"></li>
 
-		<div class = "jumbotron text-center">
-
-		<h1>My brother does not know how to use words.  Well.  IM A SHERMAN TANKKK.
-
-		<span class = "glyphicon glyphicon-star"></span>
-
-		</h1>
-
-		
-
+			</ul>
 
 
 		</div>
-
-	</div>
-
-	<div class = "container" id="my-work">
-
-		<div class = "jumbotron text-center">
-
-		<h1>I WILL <span class = "glyphicon glyphicon-cloud-download"></span> <br> ON YOUR FAVICON
-
-		
-
-		</h1>
-
-		
-
-
-
-		</div>
-
-	</div> -->
-
-	<!-- <div class="container" id="list">
-
-			<div class="col-lg-3 text-center">
-
-				Lauren and then some
-			</div>
-
-			<div class="col-lg-3 text-center">
-					beer
-			</div>
-			<div class="col-lg-3 text-center">
-					goggles
-			</div>
-			<div class="col-lg-3 text-center">
-				tinder
-			</div>
-
-	</div> -->
-
+</div>
 
 	<footer>
 
@@ -128,19 +83,47 @@
 
 
 
+
+
+
+</body>
+
+
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="js/bootstrap.js"></script>
 
+
 	<script type="text/javascript">
+
+$(document).ready(function(){
+
+	$('html').animate({'opacity':'1'}, 2000);
+
+
+	
+	//event listeners
+
+	$('#wires').on('click', function() {
+
+		if($('.jumbotron').css('display') == 'none') {
+
+			$('.jumbotron').show();
+			setTimeout(function() {
+				$('.jumbotron').css({'opacity':'.9'}, 100);
+			});
+		} else {
+			$('.jumbotron').css({'opacity':'0'}, 2000);
+			setTimeout(function() {
+				$('.jumbotron').hide();
+			}, 500);
+		}
+
+
+
+	});
+
 		
-		$('a').click(function(){
-    		$('html, body').animate({
-        	'scrollTop': $( $.attr(this, 'href') ).offset().top
-    		}, 500);
-    return false;
-		});
 
-
+});
 	</script>
-</body>
 </html>

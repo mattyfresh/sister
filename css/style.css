@@ -2,20 +2,31 @@ body, html, h1, h2, h3 {
   margin: 0;
   padding: 0; }
 
+html {
+  opacity: 0; }
+
 body {
-  background-image: url("../images/heart.JPG");
+  background: url("../images/heart.JPG") center center fixed;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  margin-bottom: 40px;
-  /*min-height: 2000px;*/ }
+  background-repeat: no-repeat; }
+
+.navbar-fixed-top {
+  background-color: rgba(0, 0, 0, 0.2);
+  background-image: url("../images/rain.jpg");
+  opacity: .6;
+  transition: opacity .5s; }
+  .navbar-fixed-top h1 {
+    font-family: 'Dancing Script', sans-serif;
+    margin-top: 4px;
+    color: transparent;
+    transition: color 2s; }
+    .navbar-fixed-top h1:hover {
+      color: white; }
+  .navbar-fixed-top:hover {
+    opacity: 1; }
 
 a {
-  color: #550c00; }
-
-#signature {
-  color: white;
-  font-family: "Dancing Script", cursive; }
+  color: grey; }
 
 .wrapper span {
   font-size: 60px;
@@ -26,12 +37,15 @@ a {
   position: fixed;
   top: 60px;
   background-color: #447684;
+  background-image: url("../images/rain.jpg");
   padding: 30px 15px;
   left: -60px;
   opacity: .1;
   border: .5px solid grey;
   z-index: 100;
-  transition: left 1s, opacity 1s, border 1s; }
+  transition: left 1s, opacity 1s, border 1s;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px; }
   .sidebar-nav li {
     list-style: none;
     padding: 4px 0;
@@ -43,43 +57,27 @@ a {
     left: -2px;
     opacity: 1; }
 
-.navbar {
-  /*background-color: #ffb6aa;*/
-  background-color: rgba(0, 0, 0, 0.2);
-  /*border-color: #ffe6aa; */
-  position: fixed;
-  width: 100%;
-  margin-bottom: 10px;
-  /*height: 20px;*/ }
-
 .jumbotron {
-  position: relative;
-  top: 60px;
-  margin-bottom: 100px;
-  color: #41002C;
-  background-image: url("../images/rain.jpg");
-  background-attachment: fixed;
-  opacity: .8; }
-  .jumbotron span {
-    height: 65px;
-    width: 70px;
-    color: black; }
-    .jumbotron span:hover {
-      color: purple; }
+  display: none;
+  background: url("../images/landscape.JPG") center center;
+  margin-top: 100px;
+  border-radius: 20px;
+  opacity: 0;
+  box-shadow: 4px 4px 10px black;
+  transition: opacity .5s; }
+  .jumbotron:hover {
+    opacity: 1 !important; }
+  .jumbotron h2 {
+    color: white; }
+  .jumbotron img {
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px black; }
 
 .navbar-fixed-bottom {
-  background-color: rgba(20, 30, 20, 0.3);
-  border-top: 1px solid #ffe6aa; }
-
-.col-lg-3 {
-  margin-bottom: 40px;
-  background-color: rgba(255, 255, 255, 0.4);
-  padding: 20px 0;
-  border: 2px solid #6b939f;
-  border-radius: 10px;
-  transition: background-color .5s; }
-  .col-lg-3:hover {
-    background-color: pink; }
-
-.navbar-container p:hover {
-  font-size: 3em; }
+  background-color: rgba(0, 0, 0, 0.2);
+  background-image: url("../images/rain.jpg");
+  opacity: .6;
+  transition: opacity .5s; }
+  .navbar-fixed-bottom:hover {
+    opacity: 1; }
