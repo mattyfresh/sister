@@ -6,8 +6,16 @@
 	<link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
 	<link type="text/css" rel="stylesheet" href="css/style.css" />
 	<link type="text/css" rel="stylesheet" href="css/animate.css" />
+	<link rel="stylesheet" href="css/swipebox.css">
 	<link href='http://fonts.googleapis.com/css?family=Dancing+Script:700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Ropa+Sans' rel='stylesheet' type='text/css'>
+
+	<!-- JS -->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+
+	<script src="js/jquery.swipebox.js"></script>
 
 
 
@@ -54,11 +62,10 @@
 	<div class="wrapper">
 		<div class="jumbotron container">
 			<ul class="list-inline text-center">
-				<h2 class="text-center">Things I have done</h2>
-				<li><img src="images/wires.jpg"></li>
-				<li><img src="images/wires.jpg"></li>
-				<li><img src="images/wires.jpg"></li>
-				<li><img src="images/wires.jpg"></li>
+				<li><a href="images/wires-large.jpg" class="swipe" rel="gallery"><img src="images/wires.jpg"></a></li>
+				<li><a href="images/mugshot.jpg" class="swipe" rel="gallery"><img src="images/mugshot-small.jpg"></a></li>
+				<li><a href="images/tree.jpg" class="swipe" rel="gallery"><img src="images/tree-small.jpg"></a></li>
+				<li><a href="images/landscape.jpg" class="swipe" rel="gallery"><img src="images/landscape-small.jpg"></a></li>
 
 			</ul>
 
@@ -74,6 +81,7 @@
 			<div class="navbar-container">
 
 				<p class="navbar-text pull-left">made by danmatt</p>
+				<h1 class="text-center pull-right"><a href="mailto:jaclynpadich@gmail.com" target="_blank">email me</a></h1>
 			
 			</div>	
 
@@ -89,8 +97,7 @@
 </body>
 
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script src="js/bootstrap.js"></script>
+
 
 
 	<script type="text/javascript">
@@ -109,7 +116,8 @@ $(document).ready(function(){
 
 			$('.jumbotron').show();
 			setTimeout(function() {
-				$('.jumbotron').css({'opacity':'.9'}, 100);
+				$('.jumbotron').css({'opacity':'.8'}, 100);
+				$('.jumbotron img').addClass('animated fadeIn');
 			});
 		} else {
 			$('.jumbotron').css({'opacity':'0'}, 2000);
@@ -122,8 +130,14 @@ $(document).ready(function(){
 
 	});
 
+	//swipeBox********************************
+
+	$('.swipe').swipebox();
+
+
 		
 
 });
+
 	</script>
 </html>
