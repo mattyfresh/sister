@@ -61,7 +61,8 @@ a {
   display: none;
   background: url("../images/rain-b&w.jpg") center center no-repeat;
   background-size: cover;
-  margin-top: 100px;
+  margin-top: 200px;
+  margin-bottom: 200px;
   border-radius: 20px;
   opacity: 0;
   box-shadow: 4px 4px 10px black;
