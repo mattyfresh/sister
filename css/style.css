@@ -5,10 +5,27 @@ body, html, h1, h2, h3 {
 html {
   opacity: 0; }
 
-body {
+#heart {
+  position: fixed;
   background: url("../images/heart.JPG") center center fixed;
-  background-size: cover;
-  background-repeat: no-repeat; }
+  left: 0;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  -webkit-filter: blur(0px); }
+
+body {
+  /*  background: url("../images/heart.JPG") center center fixed;
+    background-size: cover;
+    background-repeat: no-repeat;*/
+ /* filter: blur(2px);
+  -webkit-filter: blur(2px);
+  transition: filter .5s;
+
+  &:hover {
+    filter: blur(0px);
+  }*/ }
 
 .navbar-fixed-top {
   background-color: rgba(0, 0, 0, 0.2);
@@ -59,13 +76,14 @@ a {
 
 .jumbotron {
   display: none;
-  background: url("../images/rain-b&w.jpg") center center no-repeat;
+  /*background: url('../images/rain-b&w.jpg') center center no-repeat;*/
+  background-color: rgba(0, 0, 0, 0.1);
   background-size: cover;
   margin-top: 200px;
   margin-bottom: 200px;
   border-radius: 20px;
   opacity: 0;
-  box-shadow: 4px 4px 10px black;
+  /*box-shadow: 4px 4px 10px black;*/
   transition: opacity .5s; }
   .jumbotron:hover {
     opacity: 1 !important; }
@@ -77,10 +95,13 @@ a {
     width: 200px;
     margin: 10px 0;
     border-radius: 50%;
-    box-shadow: 1px 2px 2px black;
-    transition: box-shadow .5s; }
+    /*border: 2px solid white;*/
+    box-shadow: 1px 2px 2px white;
+    -webkit-filter: blur(1px);
+    transition: box-shadow .5s, blur 1s; }
     .jumbotron img:hover {
-      box-shadow: 4px 4px 10px black; }
+      box-shadow: 4px 4px 10px white;
+      -webkit-filter: blur(0px); }
 
 .navbar-fixed-bottom {
   background-color: rgba(0, 0, 0, 0.2);
@@ -102,3 +123,9 @@ a {
       transition: color 1s; }
       .navbar-fixed-bottom h1 a:hover {
         color: white !important; }
+
+.navbar-fixed-bottom, .navbar-fixed-top {
+  -webkit-filter: blur(1px);
+  transition: blur 1s; }
+  .navbar-fixed-bottom:hover, .navbar-fixed-top:hover {
+    -webkit-filter: blur(0px); }

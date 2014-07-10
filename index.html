@@ -38,6 +38,13 @@
 
 	</header>
 
+	<div class="wrapper background">
+		<div id="heart">
+		</div>
+
+
+	</div>
+
 
 	<div class="wrapper">
 		<span class="glyphicon glyphicon-chevron-right"></span>
@@ -107,7 +114,6 @@ $(document).ready(function(){
 	$('html').animate({'opacity':'1'}, 2000);
 
 
-	
 	//event listeners
 
 	$('#wires').on('click', function() {
@@ -116,14 +122,17 @@ $(document).ready(function(){
 
 			$('.jumbotron').show();
 			setTimeout(function() {
-				$('.jumbotron').css({'opacity':'.8'}, 100);
+				$('.jumbotron').css({'opacity':'1'}, 100);
 				$('.jumbotron img').addClass('animated fadeIn');
+				$('#heart').css({'-webkit-filter':'blur(4px)'}, 4000);
 			});
 		} else {
 			$('.jumbotron').css({'opacity':'0'}, 2000);
 			setTimeout(function() {
+				$('#heart').css({'-webkit-filter':'blur(0px)'}, 500);
 				$('.jumbotron').hide();
-			}, 500);
+				
+			}, 200);
 		}
 
 
